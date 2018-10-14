@@ -1,7 +1,7 @@
 +++
 title = "The case against private methods"
 subtitle = "Why I don't use them"
-date = "2018-10-14T21:21:15+01:00"
+date = "2018-10-14T00:21:15+01:00"
 months = [ "2018-10" ]
 authors = [ "josé-san-leandro" ]
 authorPhoto = "josé-san-leandro.jpg"
