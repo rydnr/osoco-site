@@ -6,7 +6,7 @@ months = [ "2019-05" ]
 authors = [ "rafael-luque" ]
 authorPhoto = "rafael-luque.jpg"
 draft = "false"
-tags = [ "osoco", "pharo", "smalltalk", "data-structures" ]
+tags = [ "osoco", "pharo", "smalltalk", "data-structures", "moldable-development" ]
 summary = ""
 background = "book-library-education.jpg"
 backgroundSummary = "book-library-education.jpg"
@@ -56,10 +56,10 @@ Practically, the Bloom Filter is represented by a bit array and can be described
 
 The structure supports only two operations:
 
-- Adding and element into the set, and
+- Adding an element into the set, and
 - Testing whether an element is or is not a member of the set.
 
-The Bloom Filter data structure is a bit array where at the beginning all bits are equal to zero, meaning the filter is empty.
+The Bloom Filter data structure is an array of bits where at the beginning all bits are equal to zero, meaning the filter is empty.
 
 For example, consider the following Bloom filter example created to represent a set of 10 elements with a **false positive probability** (`FPP`) of `0.1` (i.e. 10%).
 
@@ -104,11 +104,11 @@ It is possible that different elements can share bits, for instance, let's add a
 
 As you can see, after adding the String `'Barcelona'` to the previous Bloom filter only the bits 30, 36 and 42 have been set, meaning that the elements `'Madrid'` and `'Barcelona'` share one of their corresponding bits.
 
-To test if a given element `x` is in the filter, all `k` hash functions are computed and check bits in the corresponding positions. If all bits are set to one, then the element `x` **may exist** in the filter. Otherwise, the element `x` **is definitely not** in the filter.
+To test if a given element `x` is in the filter, all `k` hash functions are computed and the bits in the corresponding positions are checked. If all bits are set, then the element `x` **may exist** in the filter. Otherwise, the element `x` **is definitely not** in the filter.
 
 The uncertainty about the element's existence originates from the possibility of situations when some bits are set by different elements added previously.
 
-Consider the previous Bloom filter example with the elements `'Madrid'` and `'Barcelona'` already added. To test if the element `'Barcelona'` is a member, the filter computes its 4 hash values and check that the corresponding bits in the filter are set to one, therefore the String `'Barcelona'` may exists in the filter and the `contains: 'Barcelona'` returns `true`:
+Consider the previous Bloom filter example with the elements `'Madrid'` and `'Barcelona'` already added. To test if the element `'Barcelona'` is a member, the filter computes its 4 hash values and checks that the corresponding bits in the filter are set, therefore the String `'Barcelona'` may exist in the filter and the `contains: 'Barcelona'` returns `true`:
 
 {{< highlight st "style=emacs,linenos=inline,hl_lines=7">}}
 withMadridAndBarcelonaCheckBarcelonaBloomFilter
@@ -136,7 +136,7 @@ withBerlinBloomFilter
 {{<figure src="/images/thoughts/withBerlin-bloom-filter.png" title="Inspector on the Bloom filter after adding the String 'Berlin'">}}
 
 
-We see that the bits 27 and 33 aren't set, therefore the ""Berlin"" element is definitely not in the filter, so the `contains:` method returns `false`:
+We see that the bits 27 and 33 aren't set, therefore the `'Berlin'` element is definitely not in the filter, so the `contains:` method returns `false`:
 
 {{< highlight st "style=emacs,linenos=inline,hl_lines=7">}}
 withMadridAndBarcelonaCheckBerlinBloomFilter
@@ -150,7 +150,7 @@ withMadridAndBarcelonaCheckBerlinBloomFilter
 {{< /highlight>}}
 
 
-A Bloom filter can also result in a false positive result. For example, consider the element `'Roma'`, whose 4 hash values collision in the bit 36 that is already set in our filter example, so the result of the contains method is that the element may exist in the filter:
+A Bloom filter can also result in a false positive. For example, consider the element `'Roma'`, whose 4 hash values collision in the bit 36 that is already set in our filter example, so the `contains:` method concludes the element may exist in the filter:
 
 {{< highlight st "style=emacs,linenos=inline,hl_lines=7">}}	  
 withMadridAndBarcelonaCheckRomaBloomFilter
@@ -169,7 +169,7 @@ As we know, we have not added that element to the filter, so this is an example 
 
 #### False positives
 
-As we have shown, Bloom filters can lead to situations where some element is not a member, but the algorithm returns like it is. Such an event is called a **false positive** and can occur because of hard hash collisions or coincidence in the stored bits. In the test operation there is no knowledge of whether the particular bit has been set by the same hash function as the one we compare with. 
+As we have shown, Bloom filters can lead to situations where some element is not a member, but the algorithm returns it might be. Such an event is called a **false positive** and can occur because of hard hash collisions or coincidence in the stored bits. In the test operation there is no knowledge of whether the particular bit has been set by the same hash function as the one we compare with. 
 
 Fortunately, a Bloom filter has a predictable false positive probability (`FPP`):
 
@@ -204,7 +204,7 @@ oneBillionBloomFilter
 {{< /highlight>}}
 
 	
-{{<figure src="/images/thoughts/onebillion-bloom-filter.png" title="Parameters for the previous Bloom filter able to handle 1 billion elements with FPP equals to 2%">}}	    
+{{<figure src="/images/thoughts/onebillion-bloom-filter.png" title="Parameters for the previous Bloom filter able to handle 1 billion elements with FPP equal to 2%">}}	    
 
 As you can see, the optimal number of hashes is 6 and the filter's length is **8.14 x 10<sup>9</sup> bits**, that is approximately **1 GB of memory**.
 
@@ -222,7 +222,7 @@ The previous formula for the false positive probability is a reasonably computat
 
 By other hand, the `fpp` value specified when the `PDSBloomFilter` is initialized should be interpreted as the desired fpp once the expected `n` elements have been added to the structure.
 
-For example, for a just created and still empty Bloom filter the data structure will have a `fpp` equals to 0, as you can see in the graph below:
+For example, for a just created and still empty Bloom filter the data structure will have a `fpp` equal to 0, as you can see in the graph below:
 
 {{<figure src="/images/thoughts/empty-filter-fpp-curve.png" title="The FPP for an empty filter is equals to 0">}}
 
@@ -242,13 +242,13 @@ fullBloomFilter
 
 Nevertheless, you should know that the previous *FPP curve* is a theoretical value and the *actual FPP* observed will depend on the specific dataset and hash functions you work with. In order to check empirically the goodness of our implementation we have run the following analysis:
 
-1. Randomly generate a list of email addresses which are insert them in the Bloom filter.
+1. Randomly generate a list of email addresses and insert them in the Bloom filter.
 2. Randomly generate a list of email addresses not inserted in the filter.
 3. Count the false positive events when searching for the missing addresses in the filter.
 
-We ran the experiment for values from 10 to 1.5 times the expected number of elements of the filter (with steps of 10). For each number of elements the experiment is ran 10 times. The analysis shows a graph depicting the theoretical FPP curve of the filter (blue line), the average FPP values measured in each experiment (grey crosses), the actual FPP curve (red line) and the standard deviation (red shade).
+We ran the experiment for values from 10 to 1.5 times the expected number of elements in the filter (with steps of 10). For each number of elements the experiment is ran 10 times. The analysis shows a graph depicting the theoretical FPP curve of the filter (blue line), the average FPP values measured in each experiment (grey crosses), the actual FPP curve (red line) and the standard deviation (red shade).
 
-For instance, the following code runs the previous empirical analysis and shows a graph with the results for a Bloom filter with 100 elements and FPP equals to 3%:
+For instance, the following code runs the previous empirical analysis and shows a graph with the results for a Bloom filter with 100 elements and FPP equal to 3%:
 
 {{< highlight st "style=emacs">}}	    	  
 PDSBloomFilterAnalysis openFor: (PDSBloomFilter new: 100 fpp: 0.03)
@@ -270,7 +270,7 @@ As the performance is constant, the result should be similar in the following ca
 
 {{<figure src="/images/thoughts/bloom-benchmark-million.png" title="Simple benchmarking for the same Bloom filter with 1 million elements">}}
 
-A naive implementation based on a `Collection` data structure will show a linear `O(n)` performance, or in the best case of an ordered collection, a logarithmic `O(log n)` performance. In the following benchmarks you can check as the observed behaviour using an `OrderedCollection` degrades whith the size of the collection (`n`):
+A naive implementation based on a `Collection` data structure will show a linear `O(n)` performance, or in the best case of an ordered collection, a logarithmic `O(log n)` performance. In the following benchmarks you can check as the observed behaviour using an `OrderedCollection` degrades with the size of the collection (`n`):
 
 {{<figure src="/images/thoughts/collection-benchmark-little.png" title="Simple benchmarking for an OrderedCollection with 10 elements">}}
 
@@ -283,7 +283,7 @@ versus:
 
 PharoPDS provides a simple tool for the Bloom filter in order to allow you to explore and play with this data structure.
 
-The `PDSBloomFilterPlayground` allows you to create Bloom filters to play with their operations and visualize them. You can even run benchmarking and profiling them from the UI.
+The `PDSBloomFilterPlayground` allows you to create Bloom filters to play with their operations and visualize them. You can even run benchmarks and profile them from the UI.
 
 Let's play with the playground running the following:
 
@@ -308,7 +308,7 @@ PDSBloomFilterPlayground open
   - Tudor Girba, "Moldable Development" (2018). Available at [https://www.youtube.com/watch?v=IcwHaF5aRTM].
 
   
-### Créditos
+### Credits
 
 - **Header photo**: Photo by <a href="https://pixabay.com/photos/book-library-education-knowledge-283251/" target="_blank">kropekk_pl</a> from pixaby.com with  <a href="https://pixabay.com/service/license/">Pixabay License</a>.
 
