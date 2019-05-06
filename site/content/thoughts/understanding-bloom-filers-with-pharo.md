@@ -40,7 +40,7 @@ Also *Andrei Broder* and *Michael Mitzenmacher* established the known as **The B
 
 > Wherever a list or set is used, and space is at a premium, consider using a Bloom filter if the effect of false positives can be mitigated.
 
-### Examples from the Real Workd&trade;
+### Examples from the Real World&trade;
 
 - Medium uses Bloom filters to avoid recommending articles a user has previously read.
 - Google Chrome uses a Bloom filter to identify malicious URLs.
