@@ -5,7 +5,7 @@ date = "2019-05-02"
 months = [ "2019-05" ]
 authors = [ "rafael-luque" ]
 authorPhoto = "rafael-luque.jpg"
-draft = "false"
+draft = "true"
 tags = [ "osoco", "pharo", "smalltalk", "data-structures" ]
 summary = ""
 background = "book-library-education.jpg"
@@ -15,6 +15,106 @@ backgroundSummary = "book-library-education.jpg"
 This post transcribes to the hypertext and *dead* format the interactive tutorial and custom extensions shipped with the *<a href="https://github.com/osoco/PharoPDS" target="_blank">PharoPDS</a>* library to explore and understand Bloom filters.
 
 So, if you want to start tinkering with these data structures in a really live environment, try to <a href="https://github.com/osoco/PharoPDS#install-pharopds" target="_blank">install the library</a> in a <a href="https://pharo.org/" target="_blank">Pharo</a> image and follow the interactive tutorials or play with the custom tools provided.
+
+<hr class="section-divider"/>
+
+### About Media for Thought and Constructivism in Software Development
+
+Before dealing with the transcription of the Bloom filter tutorial itself, let me a digression about our motivations for writing this small library, or more precisely approaching the library develoment in a certain way. 
+
+### Two Traditions of Computation
+
+*What computers are for?* This is a fundamental question for the software development field because its answer has determined the nature of the computer artifacts we have built in the past, from the own computers to operating systems, programming languages, software tools, user interfaces, etc. The answer to this question will continue inspiring the building of software systems and their role in the society. Our answer &mdash;as civilization&mdash; to this question will shape our future in the continuum from the technology-destructive dyspotian to the technology-based enlightenment.
+
+Historically we can distinguish two different visions or models of computation trying to give answer to the question. The dominant vision has always considered computers as number-crunching machines used to speed up calculations. Michael Nielsen has coined the term *outsourcing cognition model*: 
+
+>A common informal model of augmentation is what we may call the cognitive outsourcing model: we specify a problem, send it to our device, which solves the problem, perhaps in a way we-the-user don't understand, and sends back a solution.
+
+In the 1950s an alternative model began to develop and Douglas Engelbart published his vision in *[Augmenting Human Intellect: A Conceptual Framework](http://dougengelbart.org/content/view/138)* in 1962. He intended to **augment human intellect**. He intended to boost collective intelligence and enable knowledge workers to think in powerful new ways, to collectively solve urgent global problems.
+
+The work of Douglas Engelbart, and other designers like Ivan Sutherland (Sketchpad), J.C.R. Licklider or Alan Kay (OOP and Smalltalk) conforms a vision where computers weren't mere calculating machines. Rather a tool that humans could use to expand their own capabilities, i.e. *human intelligence augmentation*. In this view computers are a mean to change and expand human thought itself. 
+
+We can trace both models back to the early years of the first electronic computers. However, the tension between these two models is still present today.
+
+
+### Constructivist Software Libraries
+
+Although I consider that the intelligent augmentation has not been the dominant model, this vision has strongly influenced later a lot of researchers, like the computer scientist and educator Seymour Papert.
+
+Seymour Papert published [Mindstorms](https://en.wikipedia.org/wiki/Mindstorms_(book)) in 1980, in which he conveyed a vision for how to leverage the democratization of computing for learning.
+
+Papert work on the Logo programming language and his concept of *microworlds* as a learning tool were based in the philosophy of
+constructivism.
+
+Constructivism is the name of a school of educational philosophy closely
+aligned with the theories of Jean Piaget. Essentially it
+consists of the idea that learning involves individual constructions of
+knowledge.
+
+Papert further argued that you didn't learn concepts by absorbing it directly into your mind, but rather, you had to develop your own personal understanding of the concept's meaning by building upon your prior knowledge.
+
+You may remember sitting in a physics or engineering class trying to get an intuitive sense of the math, but only having your eureka moment when you found the right insight of the idea, probably a non-mathematical representation, that was deeply connected to something you already understood.
+
+I agree with Papert's view of knowledge as individually constructed versus a rigidly directed instructivism. I also agree with his view of computers as a powerful medium for creating contexts for constructing knowledge: *microworlds*.
+
+Microworlds are interactive learning environments. Basically, a
+microworld is a conceptual model of some aspect of the real world. It is
+usually an idealized and simplified environment, based in a computer or
+other medium, in which learners (usually children) explore or manipulate
+the logic, rules, or relationships of the modeled concept, as determined by the
+designer. A microworld is a *cognitive tool*.
+
+
+
+### Moldable Development
+
+
+
+Programming computers can be crazy-making. Other professions give you the luxury of seeing tangible proof of your efforts. A watchmaker can watch the cogs and wheels; a seamstress can watch the seasm come together with each stich. But programmers design, build, and repair the stuff of imagination, ghostly mechanisms that escape the senses. Our work takes place not in RAM, not in an editor, but within our own minds.
+
+Building models in the mind is both the challenge and the joy of programming.
+
+
+By creating user interfaces which let us work with the representations inside machine learning models, we can give people new tools for reasoning.
+
+
+
+
+Historically, lasting cognitive technologies have been invented only rarely. But modern computers are a meta-medium enabling the rapid invention of many new cognitive technologies.
+
+When that happens, we’re using computers to expand the range of thoughts we can think.
+
+It’s a view in which computers are a means to change and expand human thought itself. 
+
+Examples such as those described in this essay suggest that AI systems can enable the creation of new cognitive technologies. Things like the font tool aren’t just oracles to be consulted when you want a new font. Rather, they can be used to explore and discover, to provide new representations and operations, which can be internalized as part of the user’s own thinking.
+
+He's created a vocabulary of operations which can be used to understand and manipulate and, most crucially of all, play with difference equations.
+
+Once we see media for thought as something that can be consciously designed, the natural question is: how far can we go?
+
+We shouldn't think of this prototype in isolation, but rather as a single step in an open-ended creative process. Imagine creating hundreds of such prototypes,
+
+
+
+
+In the remainder of this essay I will focus on the design of a particular type of media for thought, namely, the design of media to explain scientific ideas.
+
+<hr class="section-divider"/>
+
+
+approaches from constructivist explorations to rigidly directed instructivism
+
+Constructivist approach to software library programming.
+
+a constructionist refuge in inherently anti-constructionist institutions.
+
+
+
+
+What make a good software library?
+
+
+
 
 <hr class="section-divider"/>
 
@@ -297,17 +397,11 @@ PDSBloomFilterPlayground open
 			      
 ### References
 
-- On *Probabilistic Data Structures*:
-  - Burton H. Bloom. *[Space/Time Trace-offs in Hash Coding with Allowable Errors](http://crystal.uta.edu/~mcguigan/cse6350/papers/Bloom.pdf)* (1970).
-  - Donald E. Knuth. *[The Art of Computer Programming](https://www-cs-faculty.stanford.edu/~knuth/taocp.html) Volume 3: Sorting and Searching*.
-  - *[Bloom Filters by Example](http://llimllib.github.io/bloomfilter-tutorial/)*.
-  - Andrii Gakhov, *[Probabilistic Data Structures and Algorithms for Big Data Applications](https://www.gakhov.com/books/pdsa.html)*.
-- On *Moldable Development*:
-  - Andrei Chis's PhD, "Moldable Tools" (2016). Available at [http://scg.unibe.ch/archive/phd/chis-phd.pdf].
-  - Andrei Chis, "Playing with Face Detection in Pharo" (2018). Available at [https://medium.com/@Chis_Andrei/playing-with-face-detection-in-pharo-e6dd297e0ca3].
-  - Tudor Girba, "Moldable Development" (2018). Available at [https://www.youtube.com/watch?v=IcwHaF5aRTM].
+- Symourt Papert, "Mindstorms: children, computers, and powerful ideas" (1980).
+- Michael Nielsen, “Thought as a Technology”, available at [http://cognitivemedium.com/tat/index.html] (2016).
+- Carter & Nielsen, "Using Artificial Intelligence to Augment Human Intelligence", Distill, 2017. Available at [https://distill.pub/2017/aia/]
+- Andrei Chis, "Playing with Face Detection in Pharo" (2018). Available at [https://medium.com/@Chis_Andrei/playing-with-face-detection-in-pharo-e6dd297e0ca3].
 
-  
 ### Créditos
 
 - **Header photo**: Photo by <a href="https://pixabay.com/photos/book-library-education-knowledge-283251/" target="_blank">kropekk_pl</a> from pixaby.com with  <a href="https://pixabay.com/service/license/">Pixabay License</a>.
