@@ -105,7 +105,7 @@ We think of this prototype as one of the first steps of a promising journey of c
 
 While the most of mainstream libraries and frameworks are running out in a mad rush about implementation details like the *startup time*:
 
-{{<tweet 1125531218659823616>}}
+{{< tweet 1125531218659823616 >}}
 
 We think Pharo and Glamorous Toolkit meet the conditions to build **a constructionist refuge in the inherently anti-constructionist software industry**.
 
@@ -117,6 +117,7 @@ We think Pharo and Glamorous Toolkit meet the conditions to build **a constructi
 - Carter & Nielsen, [Using Artificial Intelligence to Augment Human Intelligence](https://distill.pub/2017/aia/), Distill, 2017.
 - Andrei Chis, [Playing with Face Detection in Pharo](https://medium.com/@Chis_Andrei/playing-with-face-detection-in-pharo-e6dd297e0ca3) (2018).
 - Andrei Chis's PhD, [Moldable Tools](http://scg.unibe.ch/archive/phd/chis-phd.pdf) (2016).
+- Future of Coding podcast - Episode #36: [Moldable Development: Tudor Gîrba](https://futureofcoding.org/episodes/036) (2019).
 
 ### Créditos
 
