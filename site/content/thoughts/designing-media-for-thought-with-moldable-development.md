@@ -23,7 +23,7 @@ Let us now a brief digression about our motivations for writing this small libra
 
 *What computers are for?*
 
-This is a fundamental question for the software development field because its answers have determined the nature of the computer artifacts we have built in the past, from the computers itself to operating systems, programming languages, software tools, user interfaces, etc. The answer to this question will continue inspiring the building of software systems and their role in the society. Our answer &mdash;as civilization&mdash; to this question will shape our future in an hypothetical continuum from the **technology alienating dyspotia** to the **technology enabling utopia**.
+This is a fundamental question for the software development field because its answers have determined the nature of the computer artifacts we have built in the past, from the computers themselves to operating systems, programming languages, software tools, user interfaces, etc. The answer to this question will continue inspiring the building of software systems and their role in the society. Our answer &mdash;as civilization&mdash; to this question will shape our future in an hypothetical continuum from the **technology alienating dystopia** to the **technology enabling utopia**.
 
 Historically we can distinguish two different visions or models of computation trying to give answer to the previous question. The dominant vision has always considered computers as number-crunching machines used to speed up calculations. [Michael Nielsen](http://michaelnielsen.org/) refers to this model in his essay *[Thought as Technology](http://cognitivemedium.com/tat/)* as the *outsourcing cognition model*: 
 
@@ -87,7 +87,7 @@ You can learn more about this fundamentally new perspective on programming calle
 
 {{<youtube id="IcwHaF5aRTM">}}
 
-The Glamorous Toolkit offers tools, such as an inspector, debugger or a search interface, that are highly moldable in that they can be customized to various contexts. 
+The Glamorous Toolkit offers tools such as an inspector, debugger or a search interface, that are highly moldable in that they can be customized to various contexts. 
 
 As Gîrba affirms:
 
@@ -103,7 +103,7 @@ With PharoPDS we have designed a very rough prototype of a particular type of me
 
 We think of this prototype as one of the first steps of a promising journey of creation of more Pharo libraries and tools aligned with Engelbart's and Papert's visions.
 
-While the most of mainstream libraries and frameworks are running out in a mad rush about implementation details like the *startup time*:
+While most of mainstream libraries and frameworks are running out in a mad rush about implementation details like the *startup time*:
 
 {{< tweet 1125531218659823616 >}}
 
@@ -119,7 +119,7 @@ We think Pharo and Glamorous Toolkit meet the conditions to build **a constructi
 - Andrei Chis's PhD, [Moldable Tools](http://scg.unibe.ch/archive/phd/chis-phd.pdf) (2016).
 - Future of Coding podcast - Episode #36: [Moldable Development: Tudor Gîrba](https://futureofcoding.org/episodes/036) (2019).
 
-### Créditos
+### Credits
 
 - **Header photo**: Photo by <a href="https://pixabay.com/photos/building-blocks-construction-play-674828/" target="_blank">stevepb</a> from pixaby.com with  <a href="https://pixabay.com/service/license/">Pixabay License</a>.
 
