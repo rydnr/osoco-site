@@ -13,7 +13,7 @@ backgroundSummary = "building-blocks.jpg"
 +++
 
 
-In our [previous post]({{< ref "thoughts/understanding-bloom-filters-with-pharo.md" >}}) we showed the hypertext version of the Bloom filter interactive tutorial shipped with our prototype library **[PharoPDS](https://github.com/osoco/PharoPDS)**.
+In our [previous post]({{< relref "thoughts/understanding-bloom-filters-with-pharo.md" >}}) we showed the hypertext version of the Bloom filter interactive tutorial shipped with our prototype library **[PharoPDS](https://github.com/osoco/PharoPDS)**.
 
 Let us now a brief digression about our motivations for writing this small library or, more precisely, about the approach we followed for developing that library.
 
