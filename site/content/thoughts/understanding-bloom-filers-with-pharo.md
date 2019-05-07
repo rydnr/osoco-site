@@ -152,7 +152,7 @@ withMadridAndBarcelonaCheckBerlinBloomFilter
 
 A Bloom filter can also result in a false positive. For example, consider the element `'Roma'`, whose 4 hash values collision in the bit 36 that is already set in our filter example, so the `contains:` method concludes the element may exist in the filter:
 
-{{< highlight st "style=emacs,linenos=inline,hl_lines=7">}}	  
+{{< highlight st "style=emacs,linenos=inline,hl_lines=8">}}	  
 withMadridAndBarcelonaCheckRomaBloomFilter
     <gtExample>
       | bloom |
@@ -169,7 +169,7 @@ As we know, we have not added that element to the filter, so this is an example 
 
 #### False positives
 
-As we have shown, Bloom filters can lead to situations where some element is not a member, but the algorithm returns it might be. Such an event is called a **false positive** and can occur because of hard hash collisions or coincidence in the stored bits. In the test operation there is no knowledge of whether the particular bit has been set by the same hash function as the one we compare with. 
+As we have shown, Bloom filters can lead to situations where some element is not a member, but the algorithm returns it might be. Such an event is called a **false positive** and can occur because of hard hash collisions or coincidence in the stored bits of different elements. In the test operation there is no knowledge of whether the particular bit has been set by the same hash function as the one we compare with. 
 
 Fortunately, a Bloom filter has a predictable false positive probability (`FPP`):
 
@@ -178,7 +178,7 @@ Fortunately, a Bloom filter has a predictable false positive probability (`FPP`)
 
 where `n` is the number of values already added, `k` the number of hashes and `m` the length of the filter (i.e. the bit array size).
 
-In the extreme case, when the filter is full every lookup will yield a (false) positive response. It means that the choice of `m` depends on the estimated number of elements `n` that are expected to be added, and `m` should be quite large compared to `n`.
+In the extreme case, when the filter is full, every lookup will yield a (false) positive response. It means that the choice of `m` depends on the estimated number of elements `n` that are expected to be added, and `m` should be quite large compared to `n`.
 
 In practice, the length of the filter `m`, under given false positive probability `FPP` and the expected number of elements `n`, can be determined by the formula:
 
@@ -226,7 +226,7 @@ For example, for a just created and still empty Bloom filter the data structure 
 
 {{<figure src="/images/thoughts/empty-filter-fpp-curve.png" title="The FPP for an empty filter is equals to 0">}}
 
-As you add elements to the filter the `fpp` is increased and will be equals the target fpp when the filter reach the expected number of elements, as we can see if we fill the Bloom filter:
+As you add elements to the filter the `fpp` is increased and will be equal to the target fpp when the filter reach the expected number of elements, as we can see if we fill the Bloom filter:
 
 {{< highlight st "style=emacs">}}	    
 fullBloomFilter
@@ -238,7 +238,7 @@ fullBloomFilter
     ^ bloom
 {{< /highlight>}}
 
-{{<figure src="/images/thoughts/full-filter-fpp-curve.png" title="The estimated FPP will be equals to the established value when the filter contains the number of expected elements n">}}
+{{<figure src="/images/thoughts/full-filter-fpp-curve.png" title="The estimated FPP will be equal to the established value when the filter contains the number of expected elements n">}}
 
 Nevertheless, you should know that the previous *FPP curve* is a theoretical value and the *actual FPP* observed will depend on the specific dataset and hash functions you work with. In order to check empirically the goodness of our implementation we have run the following analysis:
 
