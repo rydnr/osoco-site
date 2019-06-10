@@ -13,9 +13,14 @@ background = "cousins.jpg"
 backgroundSummary = "cousins.jpg"
 +++
 
-En OSOCO estamos buscando **ingenieros de software** para unirse a dos de nuestros equipos de desarrollo y colaborar en nuestros próximos proyectos, que seguro que serán tan intersantes como los que hemos vivido hasta el momento.
+En OSOCO estamos buscando **ingenieros de software** para unirse a dos de nuestros equipos de desarrollo y colaborar en nuestros próximos proyectos, que seguro que serán tan interesantes como los que hemos vivido hasta el momento.
 
 Orientativamente, estamos buscando los siguientes perfiles:
+
+- Desarrolladores de software con vocación generalista. Es decir, que aunque tengan más experiencia e inclinación por el desarrollo de un tipo de aplicaciones o de artefactos de software en particular (web, móvil, servicios sin UIs, algoritmos, etc.), prefieran desarrollarse como *"especialistas generalistas* (*T-shaped people*) y tener capacidades en diferentes áreas que complementen su visión general del sistema de software desarrollado.
+- Desarrolladores especializados en frontend. Estos desarrolladores complementarían con su experiencia en frontend a nuestros equipos actuales. Con el tiempo, nuestro objetivo sería que fueran capaces de evolucionar e incorporar también habilidades de otras áreas de desarrollo.
+
+En ambos casos, nos interesan diferentes niveles de experiencia:
 
 - Personas con los **estudios recién finalizados o con poca experiencia profesional**.
 - Personas **con experiencia profesional** en el sector del **desarrollo de software**.
@@ -31,7 +36,7 @@ Los componentes de nuestros equipos *Shibata* y *Titán* serán los encargados d
 
 ### ¿Qué ofrecemos?
 
-- Contrato indefinido con un salario en función de las capacidades del candidato. Los rangos salariales que contemplamos son:
+- Contrato indefinido con un salario en función de las capacidades del candidato. Los rangos salariales que contemplamos, en función de la experiencia profesional previa, son:
   - Entre 18.000 y 24.000 € brutos anuales para personas con poca o ninguna experiencia profesional.
   - Entre 30.000 y 45.000 € brutos anuales para personas con experiencia profesional previa.
 - Retribución variable en función de resultados de la compañía.
