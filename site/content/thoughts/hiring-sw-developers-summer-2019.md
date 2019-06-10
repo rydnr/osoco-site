@@ -17,8 +17,8 @@ En OSOCO estamos buscando **ingenieros de software** para unirse a dos de nuestr
 
 Orientativamente, estamos buscando los siguientes perfiles:
 
-- Desarrolladores de software con vocación generalista. Es decir, que aunque tengan más experiencia e inclinación por el desarrollo de un tipo de aplicaciones o de artefactos de software en particular (web, móvil, servicios sin UIs, algoritmos, etc.), prefieran desarrollarse como *"especialistas generalistas* (*T-shaped people*) y tener capacidades en diferentes áreas que complementen su visión general del sistema de software desarrollado.
-- Desarrolladores especializados en frontend. Estos desarrolladores complementarían con su experiencia en frontend a nuestros equipos actuales. Con el tiempo, nuestro objetivo sería que fueran capaces de evolucionar e incorporar también habilidades de otras áreas de desarrollo.
+- **Desarrolladores de software generalistas**. Es decir, que aunque tengan más experiencia e inclinación por el desarrollo de un tipo de aplicaciones o de artefactos de software en particular (web, móvil, servicios sin UIs, algoritmos, etc.), prefieran desarrollarse como *"especialistas generalistas"* (*T-shaped*) y tener capacidades en diferentes áreas que complementen su visión general del sistema de software desarrollado.
+- **Desarrolladores especializados en frontend**. Estos desarrolladores complementarían con su experiencia en frontend a nuestros equipos actuales. Con el tiempo, nuestro objetivo sería que fueran capaces de evolucionar e incorporar también habilidades de otras áreas de desarrollo.
 
 En ambos casos, nos interesan diferentes niveles de experiencia:
 
@@ -78,7 +78,7 @@ En cuanto a conocimientos concretos:
 - Dominio del análisis y diseño orientado a objetos, así como del modelado: principios, heurísticos, técnicas (CRC cards, Event Storming).
 - Domain-Driven Design (DDD).
 - Experiencia con algún framework de desarrollo web.
-- Experiencia con la generación de pruebas automáticas de código: JUnit, TestNG, Spock, etc. y Mocks/Stubs.
+- Experiencia con frameworks (JUnit, TestNG, Spock, etc.) y conceptos de testing (Mocks/Stubs, etc.)
 - Experiencia con prácticas XP (TDD, pair programming, etc.)
 
 Adicionalmente, valoraremos la formación y/o experiencia con:
