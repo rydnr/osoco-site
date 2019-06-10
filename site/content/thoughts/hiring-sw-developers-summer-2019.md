@@ -1,6 +1,6 @@
 +++
 title = "Nuestros equipos de desarrollo buscan nuevos integrantes"
-subtitle = "Si buscas nuevos desafíos como desarrollador de software, no lo dudes y ven a conocernos"
+subtitle = "Si buscas nuevos desafíos como desarrollador de software, no lo dudes y ven a conocerles"
 url = "/thoughts/2019/06/hiring-developers-summer-2019"
 date = "2019-06-10T09:10:00+01:00"
 months = [ "2019-06" ]
