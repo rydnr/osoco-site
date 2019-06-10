@@ -114,7 +114,7 @@ Lamentablemente, en nuestro sector impera una preocupante falta de profesionalid
 acostumbrarse y adaptarse los clientes. Esto se percibe en su desconfianza y en el modo en que afrontan las negociaciones 
 con sus proveedores.
 
-Hace casi 15 años, en OSOCO nos propusimos elevar el nivel y distinguirnos comportándonos como *programadores 
+Hace ya más de 15 años, en OSOCO nos propusimos elevar el nivel y distinguirnos comportándonos como *programadores 
 profesionales*. No somos profesionales porque podamos vivir de escribir código, sino porque asumimos nuestra 
 responsabilidad, tanto personal como de equipo, en relación a todos los aspectos de nuestro trabajo.
 
