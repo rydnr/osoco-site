@@ -18,7 +18,7 @@ En OSOCO estamos buscando **ingenieros de software** para unirse a dos de nuestr
 Orientativamente, estamos buscando los siguientes perfiles:
 
 - **Desarrolladores de software generalistas**. Es decir, que aunque tengan más experiencia e inclinación por el desarrollo de un tipo de aplicaciones o de artefactos de software en particular (web, móvil, servicios sin UIs, algoritmos, etc.), prefieran desarrollarse como *"especialistas generalistas"* (*T-shaped*) y tener capacidades en diferentes áreas que complementen su visión general del sistema de software desarrollado.
-- **Desarrolladores especializados en frontend**. Estos desarrolladores complementarían con su experiencia en frontend a nuestros equipos actuales. Con el tiempo, nuestro objetivo sería que fueran capaces de evolucionar e incorporar también habilidades de otras áreas de desarrollo.
+- **Desarrolladores especializados en frontend**. Estos desarrolladores complementarían con su experiencia en frontend a nuestros equipos actuales, transmitiéndoles a su vez una cultura *designOps*. Con el tiempo, adquirirán también conocimientos y habilidades de otras áreas de desarrollo.
 
 En ambos casos, nos interesan diferentes niveles de experiencia:
 
