@@ -393,6 +393,7 @@ function update-ec2-ssh() {
     if [ -z "${ip}" ]; then
       ip="$(grep Hostname ${file} | awk '{print $2;}')";
     fi
+    sed -i "s/Hostname (.*)/Hostname ${ip}/g" ${file}
   else
     cat <<EOF > ${file}
 Host ${profile}-${resource}

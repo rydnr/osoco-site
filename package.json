@@ -34,6 +34,8 @@
     "hugo-cli": "^0.5.4",
     "imports-loader": "^0.6.5",
     "netlify-cms": "^1.0.2",
+    "npm": "^6.4.1",
+    "percollate": "^0.2.8",
     "postcss-cssnext": "^2.7.0",
     "postcss-import": "^8.1.2",
     "postcss-loader": "^0.9.1",
