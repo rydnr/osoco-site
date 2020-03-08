@@ -238,12 +238,14 @@ h2 {
 /* line 248, ../../../../../sass/thoughts/_general.scss */
 h3 {
     font-family: "ralewaylight", helvetica, arial;
-    font-size: 1.8em;
+    font-size: 2.5em;
+    font-style: bold;
 }
 
 /* line 251, ../../../../../sass/thoughts/_general.scss */
 h4 {
-  font-family: "ralewaylight", helvetica, arial;
+    font-family: "ralewaylight", helvetica, arial;
+    font-size: 1.8em;    
 }
 
 /* line 254, ../../../../../sass/thoughts/_general.scss */
@@ -276,7 +278,7 @@ strong {
 /* line 271, ../../../../../sass/thoughts/_general.scss */
 .content figure {
   text-align: center;
-  margin: 1em 0;
+  margin: 2em 0;
 }
 
 /* line 276, ../../../../../sass/thoughts/_general.scss */
@@ -571,20 +573,20 @@ strong {
   color: #fff;
   text-shadow: 1px 1px 2px #969696;
   margin: 0 0 .2em 0;
-  font-size: 2em;
+  font-size: 4em;
   line-height: 1em;
 }
 @media (min-width: 768px) {
   /* line 493, ../../../../../sass/thoughts/_general.scss */
   .page-post .titlePost .title h1 {
-    font-size: 3.75rem;
+    font-size: 4.75rem;
   }
 }
 /* line 503, ../../../../../sass/thoughts/_general.scss */
 .page-post .titlePost .title h2 {
   color: #fff;
   text-shadow: 1px 1px 2px #969696;
-  font-size: 2rem;
+  font-size: 3rem;
   font-style: italic;
   margin: 0;
 }
@@ -820,3 +822,17 @@ hr.section-divider:before {
     display: none;
   }
 }
+
+
+pre {
+    padding: 2em;
+}
+
+code {
+    background: #f8f8f8;
+}
+
+figcaption h4 {
+    font-size: 1em;
+}
+
